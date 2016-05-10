@@ -1,0 +1,89 @@
+
+<root available-locales="sv_SE" default-locale="sv_SE">
+	<dynamic-element dataType="link-to-page" fieldNamespace="ddm" indexType="keyword" localizable="true" name="navigationItems" readOnly="false" repeatable="true" required="false" showLabel="true" type="ddm-link-to-page" width="large">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="externalLink" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<dynamic-element dataType="string" indexType="keyword" localizable="true" name="linkText" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+				<meta-data locale="sv_SE">
+					<entry name="label">
+						<![CDATA[Länktext]]>
+					</entry>
+					<entry name="predefinedValue">
+						<![CDATA[]]>
+					</entry>
+					<entry name="tip">
+						<![CDATA[Behöver endast fyllas i om du använder en en extern länk.]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element dataType="string" indexType="keyword" localizable="true" name="iconClass" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+				<meta-data locale="sv_SE">
+					<entry name="label">
+						<![CDATA[Ikonklass]]>
+					</entry>
+					<entry name="predefinedValue">
+						<![CDATA[]]>
+					</entry>
+					<entry name="tip">
+						<![CDATA[Om du använder en intern-url sätter du en ikon klass här (likt när du redigerar en sida och väljer ikonClass på "Egna fält" för sidan).]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="sv_SE">
+				<entry name="label">
+					<![CDATA[Länk (extern)]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Lämna blank om du använder en intern länk.]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="linkTarget" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option10400" type="option" value="none">
+				<meta-data locale="sv_SE">
+					<entry name="label">
+						<![CDATA[Normal]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option10401" type="option" value="_BLANK">
+				<meta-data locale="sv_SE">
+					<entry name="label">
+						<![CDATA[Nytt Fönster (_BLANK)]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option10402" type="option" value="value 3">
+				<meta-data locale="sv_SE">
+					<entry name="label">
+						<![CDATA[option 3]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="sv_SE">
+				<entry name="label">
+					<![CDATA[Target]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[[""]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="sv_SE">
+			<entry name="label">
+				<![CDATA[Länk (intern)]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Om du vill använda en extern-url istället, lämna detta fält blankt och skriva in extern-url i fältet nedan.]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>
