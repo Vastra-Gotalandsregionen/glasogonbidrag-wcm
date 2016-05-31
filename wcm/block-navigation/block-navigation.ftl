@@ -55,27 +55,34 @@
 <#function getUrlPrefix request>
 	<#local urlPrefix = "" />
 
-	<#local scopePlid =  getterUtil.getLong(request["theme-display"]["plid"]) />
-	<#local scopeLayout =  layoutLocalService.getLayout(scopePlid) />
-	<#local groupIdLong =  getterUtil.getLong(groupId) />
-	<#local scopeGroup =  groupLocalService.getGroup(groupIdLong) />
+	<#local themeDisplay = request["theme-display"]! />
 
-	<#local scopeLayoutSet =  layoutSetLocalService.getLayoutSet(groupIdLong, scopeLayout.isPrivateLayout()) />
-	<#local scopeLayoutSetVirtualHost = scopeLayoutSet.getVirtualHostname() />
-	<#local hasVirtualHost =  false />
+	<#if themeDisplay?has_content>
 
-	<#if scopeLayoutSetVirtualHost != "">
-		<#local hasVirtualHost =  true />
-	</#if>
+		<#local scopePlid =  getterUtil.getLong((themeDisplay["plid"])!) />
 
-	<#if !hasVirtualHost>
-		<#if scopeLayout.isPrivateLayout()>
-			<#local urlPrefix =  "/group" />
-		<#else>
-			<#local urlPrefix =  "/web" />
+		<#local scopeLayout =  layoutLocalService.getLayout(scopePlid) />
+		<#local groupIdLong =  getterUtil.getLong(groupId) />
+		<#local scopeGroup =  groupLocalService.getGroup(groupIdLong) />
+
+		<#local scopeLayoutSet =  layoutSetLocalService.getLayoutSet(groupIdLong, scopeLayout.isPrivateLayout()) />
+		<#local scopeLayoutSetVirtualHost = scopeLayoutSet.getVirtualHostname() />
+		<#local hasVirtualHost =  false />
+
+		<#if scopeLayoutSetVirtualHost != "">
+			<#local hasVirtualHost =  true />
 		</#if>
 
-		<#local urlPrefix =  urlPrefix + scopeGroup.getFriendlyURL() />
+		<#if !hasVirtualHost>
+			<#if scopeLayout.isPrivateLayout()>
+				<#local urlPrefix =  "/group" />
+			<#else>
+				<#local urlPrefix =  "/web" />
+			</#if>
+
+			<#local urlPrefix =  urlPrefix + scopeGroup.getFriendlyURL() />
+		</#if>
+
 	</#if>
 
 	<#return urlPrefix />
