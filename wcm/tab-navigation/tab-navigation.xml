@@ -1,0 +1,29 @@
+
+<root available-locales="sv_SE" default-locale="sv_SE">
+	<dynamic-element dataType="link-to-page" fieldNamespace="ddm" indexType="keyword" localizable="true" name="navigationItems" readOnly="false" repeatable="true" required="false" showLabel="true" type="ddm-link-to-page" width="large">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="linkText" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<meta-data locale="sv_SE">
+				<entry name="label">
+					<![CDATA[Länktext]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Om du lämnar detta fält blankt hämtas sidan namn upp och används.]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="sv_SE">
+			<entry name="label">
+				<![CDATA[Länk (intern)]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>
